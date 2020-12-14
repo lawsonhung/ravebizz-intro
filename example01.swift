@@ -59,7 +59,7 @@ func fizzBuzz(num: Int) -> Bool {
 
 /// sum all numbers from 1 to target
 func sumFromOne(targetEndNum: Int) -> Int {
-    var ans = 0;
+    var ans = 0
     for num in 1...targetEndNum {
         ans = ans + num
     }
@@ -70,7 +70,7 @@ func sumFromOne(targetEndNum: Int) -> Int {
 
 /// sum only even numbers
 func sumEvenFromOne(targetEndNum: Int) -> Int {
-    var ans = 0;
+    var ans = 0
     for num in 1...targetEndNum {
         if (isEven(inputNumber:num)) {
             ans += num
@@ -82,7 +82,7 @@ func sumEvenFromOne(targetEndNum: Int) -> Int {
 
 /// loop from 1 to target, sum all numbers that returns true for fizzbuzz
 func sumFizzBuzz(targetEndNum: Int) -> Int {
-    var ans = 0;
+    var ans = 0
     for num in 1...targetEndNum {
         if (fizzBuzz(num:num)){
             ans += num
@@ -96,7 +96,7 @@ func isPrime(num: Int) -> Bool {
     if (num == 2) {
         return true
     }
-    for div in 2...num-1 {
+    for div in 2..<num {
         if (num % div == 0) {
             return false
         }
