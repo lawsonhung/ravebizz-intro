@@ -107,3 +107,23 @@ print(createMatrix(ofSquare:3))
 
 /// 6. Write a function that returns the number of pairs of elements that sums up to 0
 /// Input [1,2,3,-1,-2,-4] -> Output 2
+func pairUp(nums:[Int]) -> Int{
+    var ans = 0
+
+    for (i,e1) in nums.enumerated() {
+        // print(e1)
+        for (j,e2) in nums.dropFirst(i+1).enumerated() {
+            // print("e2 is \(e2)")
+            if (e1 + e2 == 0){
+                ans += 1
+                // print("Ans is now \(ans)")
+            }
+        }
+    }
+
+    return ans
+}
+
+print(pairUp(nums:[1,2,3,-1,-2,-4]))
+
+
