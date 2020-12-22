@@ -50,30 +50,77 @@ func personInfo(name: String, location: String) -> [String: String] {
 // MARK: - QUESTIONS
 
 /// 1. Write a function that returns an array of the positions of a character in the word
+/// Could not solve this question. This question was not answered properly.
 func positionOf(character: Character, in word: String) -> [Int] {
-    
-    return []
+    var ans = [Int]()
+    let zeroIndex = word.startIndex
+    for index in 0..<word.count{
+        let nextIndex = word.index(zeroIndex, offsetBy: index)
+//        let nextIndexInt: Int = word.startIndex.distanceTo(range.startIndex)
+        if (character == word[nextIndex]){
+            print(nextIndex)
+//            ans.append(nextIndexInt)
+        }
+    }
+    return ans
 }
-print(positionOf(character: "l", in: "Hello"))  // -> [2, 3]
+//print(positionOf(character: "l", in: "Hello"))  // -> [2, 3]
 
 
 
 /// 2. Write a function that takes a string and returns a string without any duplicated letters
 /// "hello" -> "helo"
-
+func removeDuplicateLetters(word: String) -> String{
+    var wordSet = Set<Character>()
+    var ans = ""
+    for letter in word {
+        wordSet.insert(letter)
+    }
+    for letter in wordSet {
+        ans.append(letter)
+    }
+    print(wordSet)
+    return ans
+}
+//print(removeDuplicateLetters(word: "hello"))
 
 
 
 /// 3.  Write a function that returns a dictionary with the (key, value) storing (character, count of character) for a word
 /// HELLO -> [H: 1, E: 1, L: 2, O: 1]
-
-
+/// Could not solve this question. This question was not answered properly.
+func stringToDictionary(word: String) -> [Character: Int] {
+    var ans = [Character: Int]()
+    for letter in word {
+        if (ans[letter] != nil){
+            print(ans)
+//            ans[letter] += 1
+        } else {
+            ans[letter] = 1
+        }
+    }
+    
+    return ans
+}
+//print(stringToDictionary(word: "HELLO"))
 
 
 
 /// 4.  Write isPalindrome that returns a boolean
-
-
+/// Could not solve this question. This question was not answered properly. 
+func isPalindrome(word: String) -> Bool {
+//    for char in word {
+//        print(
+//        for oppositeChar in word.reversed(){
+//            if (oppositeChar != char) {
+//                return false
+//            }
+//        }
+//    }
+//    return true
+    return word == word.reversed()
+}
+print(isPalindrome(word: "madam"))
 
 
 
