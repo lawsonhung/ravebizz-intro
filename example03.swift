@@ -58,8 +58,8 @@ func positionOf(character: Character, in word: String) -> [Int] {
         let nextIndex = word.index(zeroIndex, offsetBy: index)
 //        let nextIndexInt: Int = word.startIndex.distanceTo(range.startIndex)
         if (character == word[nextIndex]){
-            print(nextIndex)
-//            ans.append(nextIndexInt)
+            print(index)
+           ans.append(index)
         }
     }
     return ans
@@ -94,7 +94,7 @@ func stringToDictionary(word: String) -> [Character: Int] {
     for letter in word {
         if (ans[letter] != nil){
             print(ans)
-//            ans[letter] += 1
+           ans[letter]! += 1
         } else {
             ans[letter] = 1
         }
@@ -118,7 +118,7 @@ func isPalindrome(word: String) -> Bool {
 //        }
 //    }
 //    return true
-    return word == word.reversed()
+    return word == String(word.reversed())
 }
 print(isPalindrome(word: "madam"))
 
