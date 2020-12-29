@@ -79,8 +79,8 @@ class Animal {
 
 class Predator: Animal{
     func hunt(){
-        let eatTimes = Int.random(in 1...2)
-        for _ in 1...eatTimes {
+        let eatTimes = Int.random(in: 0...1)
+        for _ in 0...eatTimes {
             self.eat()
         }
     }
