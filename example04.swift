@@ -77,6 +77,12 @@ class Animal {
     }
 }
 
+class Pet:Animal {
+    func play(){
+        print("Playing")
+    }
+}
+
 class Predator: Animal{
     func hunt(){
         let eatTimes = Int.random(in: 0...1)
